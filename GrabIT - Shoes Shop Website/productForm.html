@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="productForm.css">
+</head>
+<body>
+    <!-- Navbar start -->
+    <div class="navbar">
+        <nav>
+            <a href="index.html">
+                <img src="img/logo.png" class="logo-img" alt="logo">
+            </a>
+            <div class="navbar-items"> 
+                <a href="" class="navbar-item">New</a>
+                <a href="" class="navbar-item">Men</a>
+                <a href="" class="navbar-item">Women</a>
+                <a href="" class="navbar-item">Kids</a>
+                <a href="" class="navbar-item">Jordan</a>
+                <a href="" class="navbar-item">Sale</a>
+            </div>
+            <!-- Hamburger menu for mobile -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+           </div>
+  
+            <div id="search" class="navbar-item">
+                <img class="search-img" src="img/search.png" alt="">
+                <p id="searchText">Search</p>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar end -->
+
+    <!-- Form start -->
+
+    <div class="form-wrapper">
+        <form id="productForm">
+            <h2>Shoe Model Name</h2>
+            <input type="text" placeholder="eg. Airforce 1" id="shoeName" required>
+
+            <h2>Shoe Brand</h2>
+            <input type="text" placeholder="eg. Nike" id="shoeBrand" required>
+
+            <h2>Shoe Price</h2>
+            <input type="number" name="price" placeholder="eg. 79.99" id="shoePrice" step=".01" required>
+
+            <h2>Shoe Sizes</h2>
+            <input type="text" name="sizes[]" placeholder="eg. 38, 39, 40, 41, 42" id="shoeSizes" required>
+
+            <h2>Shoe Colors</h2>
+            <input type="text" name="colors[]" placeholder="eg. white, black" id="shoeColors" required>
+
+            <h2>Shoe Image Link</h2>
+            <input type="text" placeholder="eg. https://google.com/image" id="shoeImage" required>
+
+            <h2>Shoe Category</h2>
+            <input type="text" placeholder="eg. Men" id="shoeCategory" required>
+
+
+
+            <br>
+            <input type="submit" id="submit" onsubmit="return false;">
+
+        </form>
+        <p>When listing multiple items, separate them with a comma.</p>
+    </div>
+
+    <!-- Form end -->
+
+
+
+    <script src="productForm.js"></script>
+</body>
+</html>

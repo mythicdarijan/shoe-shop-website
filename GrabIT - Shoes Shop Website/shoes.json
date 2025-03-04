@@ -1,0 +1,160 @@
+{
+  "shoes": [
+    {
+      "id": "1",
+      "name": "Air Jordan 1",
+      "brand": "Nike",
+      "price": 79.99,
+      "sizes": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "colors": [
+        {
+          "colorId": 1,
+          "color": "green",
+          "img": "img/AirJordan1Green.png"
+        },
+        {
+          "colorId": 2,
+          "color": "black",
+          "img": "img/AirJordan1Black.png"
+        }
+      ],
+      "imageUrl": "img/AirJordan1Green.png",
+      "category": "Men",
+      "href": "productPage.html"
+    },
+    {
+      "id": "2",
+      "name": "Air Force 1",
+      "brand": "Nike",
+      "price": 89.99,
+      "sizes": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "colors": [
+        {
+          "colorId": 1,
+          "color": "white",
+          "img": "img/AirForce1White.png"
+        },
+        {
+          "colorId": 2,
+          "color": "black",
+          "img": "img/AirForce1Black.png"
+        }
+      ],
+      "imageUrl": "img/AirForce1White.png",
+      "category": "Men",
+      "href": "productPage.html"
+    },
+    {
+      "id": "3",
+      "name": "Air Max DN",
+      "brand": "Nike",
+      "price": 99.99,
+      "sizes": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "colors": [
+        {
+          "colorId": 1,
+          "color": "green",
+          "img": "img/AirMaxDnGreen.png"
+        },
+        {
+          "colorId": 2,
+          "color": "blue",
+          "img": "img/AirMaxDnBlue.png"
+        }
+      ],
+      "imageUrl": "img/AirMaxDnGreen.png",
+      "category": "Men",
+      "href": "productPage.html"
+    },
+    {
+      "id": "4",
+      "name": "Dunks Low",
+      "brand": "Nike",
+      "price": 79.99,
+      "sizes": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "colors": [
+        {
+          "colorId": 1,
+          "color": "blue",
+          "img": "img/DunksLowBlue.png"
+        },
+        {
+          "colorId": 2,
+          "color": "red",
+          "img": "img/DunksLowRed.png"
+        }
+      ],
+      "imageUrl": "img/DunksLowBlue.png",
+      "category": "Men",
+      "href": "productPage.html"
+    },
+    {
+      "id": "5",
+      "name": "TN Triple White",
+      "brand": "Nike",
+      "price": "99.99",
+      "sizes": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "colors": [
+        "white"
+      ],
+      "imageUrl": "https://static.nike.com/a/images/t_default/03277d4c-2820-4301-9f42-dad9c2780cbc/W+NIKE+AIR+MAX+PLUS.png",
+      "category": "Men",
+      "href": "productPage.html"
+    }
+  ]
+}

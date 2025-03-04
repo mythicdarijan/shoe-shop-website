@@ -1,0 +1,857 @@
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+}
+
+main{
+    padding: 1% 5%;
+}
+
+/*** Navbar ***/
+.navbar {
+    height: 50px;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: black;
+    padding: 0 50px;
+    position: relative; /* Ensure relative positioning for absolute child elements */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-img {
+    height: auto;
+    width: 50px;
+}
+
+.navbar-items {
+    display: flex; 
+    justify-content: center; 
+    flex-grow: 1; 
+}
+
+/* Hover effect */
+.navbar-items a:hover {
+    text-decoration: underline white;
+    text-underline-offset: 10px;
+}
+
+.navbar .navbar-item {
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px 20px;
+}
+
+/* Position the hamburger and search icons to the top right corner */
+.hamburger-menu {
+    position: absolute;
+    right: 20px; /* Position the hamburger icon on the right */
+    top: 10px;  /* Adjust top positioning */
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.hamburger {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Position the search icon to the right side */
+#search {
+    position: absolute;
+    right: 70px; /* Adjust the space between the search icon and the hamburger */
+    top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    z-index: 1001; /* Ensure it is on top */
+}
+
+.search-img {
+    height: auto;
+    width: 20px;
+}
+
+#searchText {
+    display: none;
+    padding-left: 10px; 
+    transition-delay: 2s;
+}
+
+/* Dropdown menu - hidden by default */
+.navbar-items {
+    display: flex;
+}
+
+/* When screen is small (mobile view) */
+@media (max-width: 768px) {
+
+    .navbar {
+        position: sticky; 
+        top: 0;          
+        z-index: 2000;
+        padding: 0 15px;   
+    }
+
+    .navbar-items {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1001;
+    }
+    .banner h1 {
+        z-index: 999;
+    }
+
+    .navbar-items a:hover {
+        text-decoration: underline white;
+        text-underline-offset: 2px;
+    }
+
+    .navbar-items.active {
+        display: flex;
+        z-index: 2000;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .navbar-item {
+        padding: 15px 0;
+    }
+}
+#search {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.search-img {
+    height: auto;
+    width: 20px;
+}
+
+#searchText{
+    display: none;
+    margin: 0;
+    padding-left: 10px; 
+    transition-delay: 2s;
+}
+
+/* RESPONSIVE BELOW NAVBAR */
+.responsive{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    align-content: space-between;
+}
+
+
+/*** Banner ***/
+
+.banner img{
+    display: block;
+    margin: 0;
+    height: auto;
+    width: 100%;
+    filter: blur(2px);
+}
+
+.banner h1{
+    position: absolute;
+    z-index: 1000;
+    margin: 0;
+    color: white;
+    text-align: center;
+    padding: 12% 0% 0% 40%;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 70px;
+    font-weight: 800;
+    text-shadow: 0px 1px 1px white;
+
+}
+
+.banner a{
+    position: absolute;
+    z-index: 1000;
+    margin: 0;
+    color: white;
+    margin: 22% 0% 0% 48%;
+}
+
+.discover-btn{
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: background-color 0.5s;
+    transition: color 0.5s;
+}
+
+.discover-btn:hover{
+    background-color: white;
+    color: black
+}
+@media (max-width: 768px) {
+    .banner{
+        display: flex;
+        height: 200px;
+    }
+
+    .banner img{
+        object-fit: cover;
+    }
+
+    .banner h1{
+        font-size: 50px;
+        margin: auto;
+        padding: 30px 30px;
+    }
+
+    .banner a{
+        margin: 100px 30px;
+    }
+}
+
+/*** Products ***/
+
+.products-title{
+    text-align: center;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 40px;
+}
+
+.container{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-box{
+    display: block;
+    border: 2px solid lightgray;
+    border-radius: 20px;
+    margin: 20px 30px;
+    padding: 40px;
+    box-shadow: 0px 6px 6px transparent;
+    transition: box-shadow 0.4s;
+    max-width: 160px;
+    max-height: 326px;
+}
+
+.product-box:hover{
+    box-shadow: 0px 6px 6px gray;
+}
+
+.product-content{
+    color: rgb(85, 85, 85);
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.product-content:hover{
+    color: black;
+}
+
+.product-content img{
+    height: 100px;
+    width: 160px;
+    margin: auto;
+    object-fit: cover;
+}
+
+.product-content {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product-content h1{
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.product-content h3{
+    font-size: 20px;
+}
+
+.order-btn {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 0.75em;
+    min-width: 0;
+    outline: none;
+    padding: 0.5em 2em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+   }
+   
+   .order-btn:disabled {
+    pointer-events: none;
+   }
+   
+   .order-btn:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+   }
+   
+   .order-btn:active {
+    box-shadow: none;
+    transform: translateY(0);
+   }
+
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+
+    .product-box{
+        max-width: 100%;
+        margin: 20px 25px;
+    }
+    .products-title{
+        padding: 5px;
+    }
+}
+
+/*** Product Page ***/
+
+.flex{
+    flex-direction: row;
+}
+
+.productImage{
+    padding-left: 80px;
+}
+
+.productImage img{
+    height: auto;
+    width: 450px;
+}
+
+.infoTable{
+    margin: auto;
+}
+
+.infoTable table{
+    width: 350px;
+    height: 350px;
+    background-color: rgba(218, 218, 218, 0.137);
+    border: 1px solid rgba(207, 207, 207, 0.459);
+    border-radius: 15px;
+}
+
+.infoTable tr{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.infoTable td{
+    text-align: center;
+    font-size: 20px;
+    width: 40%;
+}
+
+.infoTable th{
+    font-size: 30px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: bold;
+}
+
+.infoTable input[type="number"]{
+    width: 30px;
+}
+
+@media (max-width: 768px){
+    .flex{
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+
+    .productImage img{
+        height: auto;
+        width: 85%;
+    }
+
+}
+
+/* Hide default radio button design */
+input[type="radio"] {
+    display: none; 
+}
+
+label {
+    cursor: pointer;
+    position: relative;
+    margin-right: 15px; 
+}
+
+.checkmark {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+}
+
+.checkmark.green {
+    background-color: green;
+}
+
+.checkmark.black {
+    background-color: black;
+}
+
+.checkmark.blue{
+    background-color: blue;
+}
+
+.checkmark.red{
+    background-color: red;
+}
+
+.checkmark.white{
+    background-color: whitesmoke
+}
+
+
+/* Checkmark styling for selected radio button */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0.2em;
+    height: 0.4em;
+    border: solid white;
+    border-width: 0 0.1em 0.1em 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+    transition: opacity 120ms ease-in-out;
+}
+
+/* Show checkmark on checked */
+input[type="radio"]:checked + label .checkmark::after {
+    opacity: 1;
+}
+
+
+/* Button style */
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+.button {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #222;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+    margin: 0 33%;
+    cursor: pointer;
+  }
+  
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+  
+  .button-wrapper,.text,.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+  }
+  
+  .text {
+    top: 0
+  }
+  
+  .text,.icon {
+    transition: top 0.5s;
+  }
+  
+  .icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .button:hover {
+    background: #222;
+  }
+  
+  .button:hover .text {
+    top: -100%;
+  }
+  
+  .button:hover .icon {
+    top: 0;
+  }
+  
+  .button:hover:before,.button:hover:after {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+  }
+  
+  .button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+  }  
+
+/* Accordion Styles */
+.accordion {
+    margin: 1% 0;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    margin-bottom: 10%;
+    overflow: hidden;
+  }
+
+  .acc-item {
+    border-bottom: 1px solid lightgrey;
+    padding: 1px;
+  }
+
+  .acc-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+  }
+
+  .acc-header i {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .acc-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .acc-content {
+    padding: 10px;
+  }
+  @media (max-width: 768px){
+    .infoTable{
+        padding-bottom: 4%;
+    }
+    .accordion{
+        width: 75%;
+        padding: 0 12%;
+        margin-bottom: 4%;
+    }
+  }
+
+  /* Order Card */
+  .card {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: left;
+    z-index: 1001;
+    border-radius: 0.5rem;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #fff;
+    transition-delay: 0.5;
+    z-index: 0;
+    opacity: 0;
+  }
+  
+  .dismiss {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: black;
+    border: 2px solid #D1D5DB;
+    font-size: 1rem;
+    font-weight: 300;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    transition: .3s ease;
+    cursor: pointer;
+  }
+  
+  .dismiss:hover {
+    background-color: #ee0d0d;
+    border: 2px solid #ee0d0d;
+    color: #fff;
+  }
+  
+  .header {
+    padding: 1.25rem 1rem 1rem 1rem;
+  }
+  
+  .image {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e2feee;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    animation: animate .6s linear alternate-reverse infinite;
+    transition: .6s ease;
+  }
+  
+  .image svg {
+    color: #0afa2a;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .content {
+    margin-top: 0.75rem;
+    text-align: center;
+  }
+  
+  .title {
+    color: #066e29;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+  }
+  
+  .message {
+    margin-top: 0.5rem;
+    color: #595b5f;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .actions {
+    margin: 0.75rem 1rem;
+  }
+  
+  .history {
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    background-color: #1aa06d;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0.375rem;
+    border: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  .track {
+    display: inline-flex;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    color: #242525;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 1px solid #D1D5DB;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  @keyframes animate {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(1.09);
+    }
+  }
+
+   /* Add Button */
+
+   .add-button{
+    height: 35px;
+    width: 40px;
+    border: solid 1px lightgray;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: lightgreen;
+    box-shadow: 1px 1px black;
+    transition: background-color 0.4s;
+   }
+
+   .add-button a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px black;
+   }
+
+   .add-button:hover{
+    background-color: black;
+   }
+
+   /* Search Bar */
+   
+   #searchInput{
+    display: none;
+    background-color: transparent;
+    border: 0;
+    opacity: 0;
+    color: white;
+    border-style: none;
+    width: 100px;
+   }
+
+   #searchInput textarea:focus, input:focus{ 
+    border: none; 
+    outline: none;
+   }
+
+   .search-cards{
+    max-width: 200px;
+    background-color: rgb(46, 46, 46);
+    border-radius: 20px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    z-index: 1005;
+    padding: 10px;
+    right: 15px;
+    margin-top: 5px;
+    opacity: 0%;
+    gap: 5px;
+   }
+
+   .item-card{
+    background-color: lightgray;
+    border-radius: 10px;
+    z-index: 1006;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    margin-bottom: 3px;
+    position: relative;
+    transition: transform 0.5s;
+    padding: 5px 1px;
+   }
+
+   .item-card:hover{
+    background-color: gray;
+    transform: scale(1.02);
+   }
+
+   .item-card a{
+    text-decoration: none;
+    color: black;
+   }
+
+   .item-card a:hover{
+    color: lightgray;
+   }
+
+   .item-title{
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    padding-bottom: 2px;
+   }
+
+   .item-price{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+   }
+
+   .item-image img{
+    width: 50px;
+    max-height: 40px;
+    object-fit: cover;
+    padding-right: 5px;
+   }
+
+   .hide{
+    display: none;
+   }
